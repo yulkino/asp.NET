@@ -1,0 +1,64 @@
+﻿<style>
+    body {
+        text-align: center;
+        color: blueviolet;
+        background-color: plum;
+    }
+
+    #butt {
+        text-align: left;
+    }
+</style>
+<h2>Здесь могла быть ваша реклама</h2>
+<p>Позвоните по номер 8 *** 345 *4 5* и получите скидку на размещение вашей рекламы прямо сейчас!</p>
+<select onchange="Image(this)"> 
+    @{
+        var rnd = new Random();
+        for(var i = 0; i < 4; i++)
+        {
+            <option>@(((string[])ViewData["randomStrArr"])[rnd.Next(0, 6)])</option>
+        }
+     }
+</select>
+<br />
+<br />
+<br />
+<input type="button" value="КУПИТЬ РЕКЛАМУ" onclick="ChangeOfLocation(this); ChangeColor(this)">
+<div id="storage"></div>
+<script>
+    function Image(selector) {
+        let container = document.getElementById("storage");
+        switch (selector.value) {
+            case "я календарь":
+                container.innerHTML = "<img src='https://cs11.pikabu.ru/post_img/big/2018/09/02/8/1535896711157582119.jpg' width = 400 height = 250/>";
+                break;
+            case "я цветок":
+                container.innerHTML = "<img src='https://www.meme-arsenal.com/memes/937bc78cb97d94b83f2a4f88ef51614e.jpg' width = 400 height = 250/>";
+                break;
+            case "я рюкзак":
+                container.innerHTML = "<img src='https://i.forfun.com/jmta3saw.jpeg' width = 400 height = 250 />";
+                break;
+            case "я каарта":
+                container.innerHTML = "<img src='https://www.meme-arsenal.com/memes/782bed333c136e64c6d4babc60b26cdb.jpg' width = 400 height = 250 />";
+                break;
+            case "я КирсановаАА":
+                container.innerHTML = "<img srс='https://i.ytimg.com/vi/A4r-f_XiGF0/maxresdefault.jpg' width = 400 height = 250 />";
+                break;
+        }
+    }
+
+    function ChangeOfLocation(button) {
+        let container = document.getElementById("butt");
+        container.style.textAlign = container.style.textAlign == "left" ? "center" : "left";
+    }
+
+    function ChangeColor(button) {
+        let container = document.getElementById("butt");
+        container.style.backgroundColor = container.style.textAlign == "center" ? "aqua" : "coral";
+    }
+</script>
+<div id="butt">
+    <a href="SecondSite">
+        <p>Ваша двоящаяся реклама могла быть тут</p>
+    </a>
+</div>

@@ -10,6 +10,17 @@ namespace MyWeb.Controllers
 {
     public class HomeController : Controller
     {
+        public IActionResult FirstSite()
+        {
+            ViewData["randomStrArr"] = new string[] { "я календарь", "я цветок", "я каарта", "я рюкзак", "я КирсановаАА", "я отчислен", "непосредственно я" };
+            return View();
+        }
+
+        public IActionResult SecondSite()
+        {
+            return View();
+        }
+
         public IActionResult Index()
         {
             return View();
