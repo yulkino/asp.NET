@@ -21,6 +21,11 @@ namespace MyWeb.Controllers
             return View();
         }
 
+        public bool Check(string piece, string from0, string to0)
+        {
+            return ChessLogic.Check(piece, from0, to0);
+        }
+
         public IActionResult Index()
         {
             return View();

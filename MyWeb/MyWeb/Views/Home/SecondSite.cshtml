@@ -2,7 +2,193 @@
     body {
         text-align: center;
         background-color: antiquewhite;
+        color: indianred;
+        font-size : medium;
+    }
+    button{
+        width: 30px;
+        height: 30px;
     }
 </style>
 <p>Зачем вам двощаяса реклама?</p>
 <img src="https://i.pinimg.com/originals/37/ff/41/37ff419ab7ab5071fb3999e3f9576676.jpg" width="200" />
+<div id="storage"></div>
+<script>
+    function Res() {
+        let req = new XMLHttpRequest;
+        req.open("GET", `/Home/Check?piece=${selector}&from0=${pointF}&to0=${pointS}`);
+        req.send();
+        req.onreadystatechange = function () {
+            if (req.readyState === 4) {
+                document.getElementById("result").innerText = req.responseText;
+            }
+        }
+    }
+    var pointF;
+    var pointS;
+    var selector;
+    function Click(but) {
+        but.value = ;
+        pointF = pointS;
+        pointS = but.id;
+        if (pointS !== undefined && pointF !== undefined) Res();
+    }
+
+    function Changer(select) {
+        selector = select.value;
+    }
+</script>
+<br />
+<br />
+<br />
+<p><b>Интерактивчики</b></p>
+<br />
+<select onchange="Changer(this)">
+    <option></option>
+    <option>King</option>
+    <option>Queen</option>
+    <option>Rook</option>
+    <option>Bishop</option>
+    <option>Knight</option>
+    <option>Pawn</option>
+</select>
+<br />
+<div id="result" style="color: cadetblue; font-size : large;"></div>
+<table class="chess">
+    <tr>
+        <td><button id="a1" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="a2" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="a3" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="a4" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="a5" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="a6" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="a7" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="a8" style="background-color: white;" onclick="Click(this)"></button></td>
+    </tr>
+    <tr>
+        <td><button id="b1" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="b2" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="b3" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="b4" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="b5" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="b6" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="b7" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="b8" style="background-color: indianred;" onclick="Click(this)"></button></td>
+    </tr>
+    <tr>
+        <td><button id="c1" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="c2" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="c3" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="c4" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="c5" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="c6" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="c7" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="c8" style="background-color: white;" onclick="Click(this)"></button></td>
+    </tr>
+    <tr>
+        <td><button id="d1" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="d2" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="d3" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="d4" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="d5" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="d6" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="d7" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="d8" style="background-color: indianred;" onclick="Click(this)"></button></td>
+    </tr>
+    <tr>
+        <td><button id="e1" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="e2" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="e3" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="e4" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="e5" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="e6" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="e7" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="e8" style="background-color: white;" onclick="Click(this)"></button></td>
+    </tr>
+    <tr>
+        <td><button id="f1" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="f2" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="f3" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="f4" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="f5" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="f6" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="f7" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="f8" style="background-color: indianred;" onclick="Click(this)"></button></td>
+    </tr>
+    <tr>
+        <td><button id="g1" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="g2" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="g3" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="g4" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="g5" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="g6" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="g7" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="g8" style="background-color: white;" onclick="Click(this)"></button></td>
+    </tr>
+    <tr>
+        <td><button id="h1" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="h2" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="h3" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="h4" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="h5" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="h6" style="background-color: indianred;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="h7" style="background-color: white;" onclick="Click(this)"></button>
+        <td />
+        <td><button id="h8" style="background-color: indianred;" onclick="Click(this)"></button></td>
+    </tr>
+</table>
