@@ -78,7 +78,7 @@ using MyWeb.Models;
             WriteLiteral("            ");
             EndContext();
             BeginContext(454, 72, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c5281763301b4ebf922da548106a19f2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "68c3d6138bae4dbd8c1010780245b7bf", async() => {
                 BeginContext(464, 52, false);
 #line 19 "D:\GitKraken\asp.NET\MyWeb\MyWeb\Views\Home\FirstSite.cshtml"
                 Write(((string[])ViewData["randomStrArr"])[rnd.Next(0, 6)]);

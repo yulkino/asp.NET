@@ -4,13 +4,16 @@
         background-color: antiquewhite;
         color: indianred;
         font-size : medium;
+        font-family: 'Century Gothic';
     }
     button{
-        width: 30px;
-        height: 30px;
+        width: 40px;
+        height: 40px;
+        color: darksalmon;
+        font-weight : 1000;
     }
 </style>
-<p>Зачем вам двощаяса реклама?</p>
+<p>Зачем вам двоящаяса реклама?</p>
 <img src="https://i.pinimg.com/originals/37/ff/41/37ff419ab7ab5071fb3999e3f9576676.jpg" width="200" />
 <div id="storage"></div>
 <script>
@@ -28,21 +31,24 @@
     var pointS;
     var selector;
     function Click(but) {
-        but.value = ;
+        but.innerText = selector[0];
+        if (pointS !== undefined && pointF !== undefined) document.getElementById(pointF).innerText = " ";
         pointF = pointS;
         pointS = but.id;
         if (pointS !== undefined && pointF !== undefined) Res();
+        
     }
 
     function Changer(select) {
         selector = select.value;
+        document.getElementById(pointF).innerText = selector[0];
+        document.getElementById(pointS).innerText = selector[0];
     }
 </script>
 <br />
+<p><b>И н т е р а к т и в ч и к и</b></p>
 <br />
-<br />
-<p><b>Интерактивчики</b></p>
-<br />
+<div id="result" style="color: mediumslateblue; font-size : x-large; font-family: 'Century Gothic'"></div>
 <select onchange="Changer(this)">
     <option></option>
     <option>King</option>
@@ -53,8 +59,7 @@
     <option>Pawn</option>
 </select>
 <br />
-<div id="result" style="color: cadetblue; font-size : large;"></div>
-<table class="chess">
+<table class="chess" align="center">
     <tr>
         <td><button id="a1" style="background-color: indianred;" onclick="Click(this)"></button>
         <td />
